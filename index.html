@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dawood Arslan is a Mechanical Engineer with experience in aircraft airworthiness planning, industrial project engineering, maintenance, water treatment systems, and technical design.">
+  <meta name="theme-color" content="#0b1730">
+  <title>Dawood Arslan | Mechanical & Aerospace Engineering</title>
+  <style>
+    :root {
+      --navy: #0b1730;
+      --navy-2: #122445;
+      --blue: #4d8cff;
+      --cyan: #66d9e8;
+      --ink: #17243a;
+      --muted: #65738b;
+      --paper: #f5f7fb;
+      --white: #fff;
+      --line: #e1e7f0;
+      --shadow: 0 18px 50px rgba(14, 34, 68, .10);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    .topbar { background: rgba(11,23,48,.96); color: white; position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(14px); }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.03em; text-decoration: none; font-size: 1.08rem; }
+    .brand span { color: var(--cyan); }
+    .navlinks { display: flex; gap: 23px; flex-wrap: wrap; align-items: center; }
+    .navlinks a { color: #dce6f8; text-decoration: none; font-size: .92rem; }
+    .navlinks a:hover { color: var(--cyan); }
+    .menu { display: none; background: transparent; color: white; border: 1px solid #53627b; border-radius: 10px; padding: 8px 12px; font: inherit; }
+    .hero { background: radial-gradient(circle at 82% 18%, rgba(77,140,255,.25), transparent 28%), linear-gradient(135deg, var(--navy), #102b50 72%, #123e5b); color: white; padding: 92px 0 84px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr .8fr; gap: 60px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; text-transform: uppercase; letter-spacing: .13em; color: var(--cyan); font-size: .77rem; font-weight: 800; }
+    .eyebrow:before { content: ""; width: 25px; height: 2px; background: var(--cyan); }
+    h1 { font-size: clamp(2.7rem, 6vw, 4.7rem); letter-spacing: -.055em; line-height: 1.05; margin: 18px 0; }
+    .hero p { color: #d2dced; font-size: 1.08rem; max-width: 660px; }
+    .hero .lead { font-size: clamp(1.15rem, 2vw, 1.35rem); color: #f4f8ff; font-weight: 600; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: 12px; font-weight: 750; text-decoration: none; border: 1px solid transparent; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--cyan); color: #07182d; }
+    .btn-outline { border-color: rgba(255,255,255,.35); color: white; }
+    .hero-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); padding: 28px; border-radius: 24px; box-shadow: 0 24px 80px rgba(0,0,0,.12); }
+    .monogram { width: 82px; height: 82px; border-radius: 22px; display: grid; place-items: center; font-size: 1.65rem; font-weight: 850; color: var(--navy); background: linear-gradient(135deg, var(--cyan), #a9f0f6); margin-bottom: 20px; }
+    .hero-card h2 { margin: 0 0 8px; font-size: 1.25rem; }
+    .hero-card p { font-size: .94rem; margin: 0; }
+    .quick-facts { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 22px; }
+    .fact { border-top: 1px solid rgba(255,255,255,.17); padding-top: 12px; }
+    .fact strong { display: block; font-size: 1.05rem; color: white; }
+    .fact span { color: #c5d3e8; font-size: .82rem; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 720px; margin-bottom: 34px; }
+    .kicker { color: #2864bd; text-transform: uppercase; font-size: .76rem; letter-spacing: .14em; font-weight: 850; }
+    h2.section-title { font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.04em; line-height: 1.15; margin: 9px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 34px; align-items: start; }
+    .panel { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .panel p:first-child { margin-top: 0; }
+    .focus-list { display: grid; gap: 14px; }
+    .focus-item { display: flex; gap: 13px; align-items: flex-start; }
+    .focus-icon { flex: 0 0 38px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: #eaf3ff; color: #235eb5; font-weight: 850; }
+    .focus-item strong { display: block; margin-bottom: 2px; }
+    .focus-item span { color: var(--muted); font-size: .92rem; }
+    .timeline { display: grid; gap: 16px; }
+    .job { display: grid; grid-template-columns: 145px 1fr; gap: 24px; padding: 25px 27px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 28px rgba(14,34,68,.04); }
+    .job-date { color: #2864bd; font-weight: 800; font-size: .88rem; }
+    .job h3 { margin: 0 0 3px; font-size: 1.15rem; }
+    .job .company { color: var(--muted); font-weight: 650; margin-bottom: 12px; }
+    .job ul { margin: 0; padding-left: 19px; color: #47566e; }
+    .job li { margin: 6px 0; }
+    .project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .project { padding: 27px; background: white; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; }
+    .project:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .project-number { color: #2864bd; font-weight: 850; font-size: .8rem; letter-spacing: .12em; }
+    .project h3 { margin: 8px 0; font-size: 1.2rem; }
+    .project p { color: var(--muted); margin-bottom: 0; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag { border: 1px solid #d9e5f5; background: white; color: #29415f; border-radius: 999px; padding: 8px 12px; font-size: .9rem; }
+    .skills-layout { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .skill-box { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 23px; }
+    .skill-box h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .skill-box .tag-list { gap: 7px; }
+    .skill-box .tag { font-size: .82rem; padding: 6px 10px; }
+    .education { display: flex; gap: 18px; align-items: flex-start; }
+    .edu-mark { width: 52px; height: 52px; flex-shrink: 0; display: grid; place-items: center; border-radius: 15px; background: #eaf3ff; color: #235eb5; font-weight: 900; }
+    .education h3 { margin: 0 0 4px; }
+    .education p { margin: 0; color: var(--muted); }
+    .languages { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .language { padding: 16px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+    .language strong { display: block; }
+    .language span { color: var(--muted); font-size: .9rem; }
+    .contact { background: var(--navy); color: white; }
+    .contact .section-head p { color: #c6d5e9; }
+    .contact-card { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); }
+    .contact-card p { color: #d2dced; margin: 5px 0 0; }
+    .contact-card a:not(.btn) { color: var(--cyan); }
+    footer { background: #071225; color: #aab9ce; padding: 24px 0; font-size: .86rem; }
+    footer .container { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .note { font-size: .9rem; color: var(--muted); }
+    @media (max-width: 800px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero { padding: 64px 0; }
+      .skills-layout { grid-template-columns: 1fr 1fr; }
+      .job { grid-template-columns: 1fr; gap: 8px; }
+      .navlinks { display: none; position: absolute; left: 0; right: 0; top: 72px; padding: 20px; background: var(--navy); flex-direction: column; align-items: flex-start; }
+      .navlinks.open { display: flex; }
+      .menu { display: inline-block; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, 1120px); }
+      section { padding: 56px 0; }
+      .project-grid, .skills-layout, .languages { grid-template-columns: 1fr; }
+      .contact-card { align-items: flex-start; flex-direction: column; }
+      .panel, .project, .job { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">DA<span>.</span></a>
+        <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Mechanical Engineer · Aviation & Industry</div>
+          <h1>Dawood<br>Arslan<span style="color:var(--cyan)">.</span></h1>
+          <p class="lead">Engineering reliability, practical problem-solving, and continuous improvement.</p>
+          <p>Mechanical Engineer with experience in aircraft airworthiness planning, industrial project engineering, plant maintenance, water treatment systems, and technical design. Interested in contributing to engineering teams working on reliable, safe, and efficient systems.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#experience">Explore my experience ↓</a>
+            <a class="btn btn-outline" href="mailto:dawoodarslan95@gmail.com">Contact me</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="monogram" aria-hidden="true">DA</div>
+          <h2>Engineering profile</h2>
+          <p>Mechanical engineering · Aircraft continuing airworthiness · Project execution · Maintenance and reliability</p>
+          <div class="quick-facts">
+            <div class="fact"><strong>4+</strong><span>Engineering roles listed</span></div>
+            <div class="fact"><strong>2022</strong><span>Bachelor's completed</span></div>
+            <div class="fact"><strong>230,000 GPD</strong><span>RO plant project experience</span></div>
+            <div class="fact"><strong>5 technicians</strong><span>Team leadership experience</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">About me</div>
+          <h2 class="section-title">Practical engineering, from design to operation.</h2>
+          <p>A concise overview of the engineering experience and interests I bring to a team.</p>
+        </div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>I hold a Bachelor's degree in Mechanical Engineering from Mehran University of Engineering and Technology. My professional experience spans aviation continuing airworthiness management, water treatment and industrial project commissioning, mechanical maintenance, and HVAC design.</p>
+            <p>I enjoy work that connects engineering fundamentals with real operating challenges: equipment reliability, technical documentation, safe execution, energy efficiency, and data-informed improvement.</p>
+            <p class="note">I am interested in suitable engineering opportunities and academic pathways in Germany. My eligibility for a particular working-student role depends on the employer's requirements and my study and work authorization status.</p>
+          </div>
+          <div class="panel focus-list">
+            <div class="focus-item"><div class="focus-icon">01</div><div><strong>Safety & compliance</strong><span>Aircraft records, maintenance planning, approved modifications, and site HSE practices.</span></div></div>
+            <div class="focus-item"><div class="focus-icon">02</div><div><strong>Reliability & maintenance</strong><span>Preventive maintenance, troubleshooting, equipment inspections, and downtime reporting.</span></div></div>
+            <div class="focus-item"><div class="focus-icon">03</div><div><strong>Projects & improvement</strong><span>Commissioning, contractor coordination, technical design, scheduling, and cost-conscious solutions.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background:#edf2f8">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Professional experience</div>
+          <h2 class="section-title">Experience across aviation and industry.</h2>
+          <p>Selected responsibilities from my professional background.</p>
+        </div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-date">Nov 2025 – Present</div>
+            <div>
+              <h3>CAMO Planning Engineer</h3><div class="company">AirSial · Karachi, Pakistan</div>
+              <ul>
+                <li>Support continuing airworthiness of assigned aircraft in line with PCAA regulations and approved maintenance programmes.</li>
+                <li>Coordinate Engineering Change Orders, technical documentation, regulatory submissions, and approved modifications.</li>
+                <li>Review OEM and non-OEM Service Bulletins for technical applicability and regulatory impact.</li>
+                <li>Monitor aircraft hours, cycles, maintenance due items, and deferred defects to help prevent overdue tasks.</li>
+                <li>Coordinate technical records and maintenance planning with Planning, MCC, and Maintenance teams.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">Nov 2024 – Nov 2025</div>
+            <div>
+              <h3>Project Engineer</h3><div class="company">Fluid Technology International · Karachi, Pakistan</div>
+              <ul>
+                <li>Worked on erection and commissioning of a 230,000 GPD seawater reverse-osmosis plant and a 30,000 GPD polishing unit.</li>
+                <li>Supported commissioning of a 50 m³/h RO plant, contractor coordination, work permits, site safety, piping layout, and tank placement.</li>
+                <li>Supervised installation of 2 km of HDPE pipeline and supported joint testing and pre-startup checks.</li>
+                <li>Helped improve BWRO system recovery to 30% through membrane-cleaning interval adjustments and pressure-drop troubleshooting.</li>
+                <li>Used Primavera P6 for scheduling and Power BI dashboards for plant indicators such as downtime and chemical usage.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">Oct 2023 – Oct 2024</div>
+            <div>
+              <h3>Junior Assistant Engineer</h3><div class="company">Amreli Steels Limited · Karachi, Pakistan</div>
+              <ul>
+                <li>Serviced and troubleshot pumps, hydraulic units, gearboxes, cooling towers, and loop formers.</li>
+                <li>Prepared maintenance cost reports and equipment checklists for inspections and preventive maintenance.</li>
+                <li>Led a team of five technicians supporting preventive and predictive maintenance.</li>
+                <li>Contributed to Lean and Kaizen improvements, including in-house fabrication of pusher rollers and loop-former parts.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">Nov 2022 – Sep 2023</div>
+            <div>
+              <h3>Project and Design Engineer</h3><div class="company">A+ Engineer Consultancy · Karachi, Pakistan</div>
+              <ul>
+                <li>Designed centralized air-conditioning systems for clients in pharmaceutical and FMCG sectors.</li>
+                <li>Performed load calculations, duct sizing, and piping layouts using applicable ASHRAE guidance.</li>
+                <li>Identified cost-effective design options and opportunities to reuse existing infrastructure.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Selected projects</div>
+          <h2 class="section-title">Turning engineering concepts into practical solutions.</h2>
+          <p>Project summaries based on my CV. Add drawings, photographs, or reports only when you have permission to share them.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-number">PROJECT 01 · MECHATRONICS</div>
+            <h3>Agricultural Moisture Detection Robot</h3>
+            <p>University project focused on designing and fabricating a robot for agricultural moisture detection. A useful starting point for discussing sensing, mechanical design, and agricultural applications.</p>
+          </article>
+          <article class="project">
+            <div class="project-number">PROJECT 02 · ENERGY ANALYSIS</div>
+            <h3>Centralized HVAC Energy Analysis</h3>
+            <p>Analysed the energy performance of a centralized air-conditioning system in a pharmaceutical company context.</p>
+          </article>
+          <article class="project">
+            <div class="project-number">PROJECT 03 · WATER SYSTEMS</div>
+            <h3>Reverse-Osmosis Plant Commissioning</h3>
+            <p>Project experience across seawater and brackish-water RO systems, commissioning activities, pipeline installation, maintenance, and operational performance indicators.</p>
+          </article>
+          <article class="project">
+            <div class="project-number">PROJECT 04 · INDUSTRIAL IMPROVEMENT</div>
+            <h3>Maintenance & Reliability Improvements</h3>
+            <p>Practical maintenance experience involving equipment troubleshooting, preventive maintenance, technician coordination, checklists, and Lean/Kaizen improvements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#edf2f8">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Technical toolkit</div>
+          <h2 class="section-title">Tools and areas of knowledge.</h2>
+          <p>Skills listed in my CV. Proficiency levels can be added later for each tool.</p>
+        </div>
+        <div class="skills-layout">
+          <div class="skill-box"><h3>Design & simulation</h3><div class="tag-list"><span class="tag">AutoCAD</span><span class="tag">CATIA V5</span><span class="tag">SolidWorks</span><span class="tag">Fusion 360</span><span class="tag">Autodesk Inventor</span><span class="tag">ANSYS (FEM)</span><span class="tag">MATLAB</span></div></div>
+          <div class="skill-box"><h3>Operations & planning</h3><div class="tag-list"><span class="tag">Primavera P6</span><span class="tag">MS Project</span><span class="tag">SAP / S/4HANA</span><span class="tag">Maintenance planning</span><span class="tag">Technical records</span><span class="tag">HSE coordination</span></div></div>
+          <div class="skill-box"><h3>Data & engineering</h3><div class="tag-list"><span class="tag">Power BI</span><span class="tag">Microsoft Excel</span><span class="tag">Minitab</span><span class="tag">Hydraulics</span><span class="tag">HVAC design</span><span class="tag">RO systems</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Education & credentials</div>
+          <h2 class="section-title">Education, training, and languages.</h2>
+        </div>
+        <div class="panel">
+          <div class="education">
+            <div class="edu-mark">BEng</div>
+            <div><h3>Bachelor of Engineering in Mechanical Engineering</h3><p>Mehran University of Engineering and Technology · Jamshoro, Pakistan</p><p>October 2018 – December 2022</p></div>
+          </div>
+          <hr style="border:0;border-top:1px solid var(--line);margin:24px 0">
+          <h3 style="margin-top:0">Selected certifications & training</h3>
+          <ul>
+            <li>Vibration Training Category 1+ · ISTEC</li>
+            <li>CAMO Certification · AirSial</li>
+            <li>AutoCAD · DigiSkills</li>
+            <li>Advancing the Digital Economy for Sustainable Growth in Asia · ADB Institute</li>
+            <li>Energy Economics, Environment, and Policy · ADB Institute</li>
+          </ul>
+        </div>
+        <div style="height:18px"></div>
+        <div class="languages">
+          <div class="language"><strong>English</strong><span>B2 · As listed in CV</span></div>
+          <div class="language"><strong>Urdu</strong><span>Mother tongue</span></div>
+          <div class="language"><strong>Punjabi</strong><span>Mother tongue / as listed in CV</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker" style="color:var(--cyan)">Contact</div>
+          <h2 class="section-title">Let's connect.</h2>
+          <p>For engineering opportunities, academic collaboration, or professional networking, feel free to get in touch.</p>
+        </div>
+        <div class="contact-card">
+          <div><h3 style="margin:0">Dawood Arslan</h3><p>Mechanical Engineer · Aviation & Industrial Projects</p><p><a href="mailto:dawoodarslan95@gmail.com">dawoodarslan95@gmail.com</a></p></div>
+          <a class="btn btn-primary" href="mailto:dawoodarslan95@gmail.com?subject=Professional%20opportunity%20-%20Dawood%20Arslan">Email me ↗</a>
+        </div>
+        <p class="note" style="color:#b8c7dc;margin-top:18px">This website is a professional summary. Please contact me for a tailored CV and further project details.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> Dawood Arslan</span><span>Mechanical Engineering · Aviation · Industry</span></div></footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuButton = document.getElementById("menuButton");
+    const navlinks = document.getElementById("navlinks");
+    menuButton.addEventListener("click", () => {
+      const open = navlinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+    });
+    navlinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navlinks.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>
